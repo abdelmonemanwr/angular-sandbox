@@ -1,19 +1,19 @@
 
+import { RouterOutlet } from '@angular/router';
 import { Component, signal } from '@angular/core';
-import { HeaderComponent } from './components/header-component/header-component';
-import { FooterComponent } from './components/footer-component/footer-component';
-import { ContentComponent } from './components/content-component/content-component';
+import { Navbar } from './shared/components/navbar/navbar';
+import { Footer } from './shared/components/footer/footer';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
   imports: [
-    HeaderComponent,
-    ContentComponent,
-    FooterComponent,
-  ]
+    Navbar,
+    Footer,
+    RouterOutlet
+]
 })
 export class App {
-  protected readonly title = signal('my-app');
+  protected readonly title = signal('Shoply');
 }
